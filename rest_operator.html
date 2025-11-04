@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sum(num1, num2) {
+        document.write(num1, num2 + "br");
+      }
+      sum(10, 20);
+      sum(10, 20, 30);
+
+      function sum1() {
+        let sum = 0;
+        for (let i in arguments) {
+          //`argument hold all passed values`
+          sum += arguments[i];
+        }
+        document.write(sum + "<br>");
+      }
+      sum1(10, 50, 50, 60);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Form Details</h1>
+    <h1>Hello</h1>
+    <h1>Welcome</h1>
+    <form>
+    <label>First name</label>
+    <input type="text" placeholder="Enter first name" /><br /><br />
+
+    <label>Last name</label>
+    <input type="text" placeholder="Enter last name" /><br /><br />
+
+    <label>Mobile number</label>
+    <input type="text" placeholder="Enter Mobile Number" /><br /><br />
+
+    <label>Password</label>
+    <input type="password" /><br /><br />
+    
+      <label>Choose Cities</label><br />
+      <input type="checkbox" />Mumbai <input type="checkbox" />Pune
+      <input type="checkbox" />Nashik <input type="checkbox" />Goa
+      <input type="checkbox" />Nanded
+      <br />
+      <label>Gender</label><br />
+      <input type="radio" name="gender" />Male
+      <input type="radio" name="gender" />Female
+      <input type="radio" name="gender" />Others
+      <br />
+      <label>Date and Time</label>
+      <input type="date" />
+      <input type="month" />
+      <input type="week" />
+      <input type="time" />
+      <input type="datetime-local" /><br />
+
+      <label>Upload Documents</label>
+      <input type="file" multiple />
+      <input type="range" />
+      <input type="color" />
+
+      <br />
+      <label>Choose Sweet Dish</label>
+      <select>
+        <option>Choose Dish..</option>
+        <option>Kaju Katli</option>
+        <option>Sonpapdi</option>
+        <option>Rasgula</option>
+        <option>Malaibarfi</option>
+        <option>Bondi Lado</option>
+        <option>Gulab Jamon</option>
+        <option>Jalabee</option>
+      </select>
+      <br />
+
+      <label>Address text area</label>
+      <textarea rows="3" cols="100"></textarea>
+      <br />
+      <input type="reset" value="Reset" />
+      <input type="submit" value="submit" />
+      <input type="button" value="submit" />
+    </form>
+    <hr>
+    <fieldset>
+        <legend>Contact Form
+        </legend>
+        <form>
+<label>Name</label>
+<input type="test"/><br>
+<label>Email</label>
+<input type="text"/><br>
+<br><label>Phone No</label>
+<input type="number"/><br>
+<label>Address</label>
+<textarea rows="3" cols="100"></textarea>
+<br>
+<input type="submit"/>
+
+
+
+
+
+        </form>
+    </fieldset>
+  </body>
+</html>
+
+    </script>
+  </body>
+</html>
