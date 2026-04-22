@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template String or Litral</title>
+    <title>Document</title>
 </head>
-<body>
-    <script>
-        var name = "aditya";
-        var address ="india"
-        document.write("hello my name is "+ name + ", i am from "+ address +"<br>");
-        document.write(`hello my name is "${name}",i am from" ${address}`);
+<body> 
+<script>
+   let name ="aditya";
+    var address ="pune";
+//using template string -ES6 Features
+    document.write(`Hello my name is ${name} , I am from ${address}`);
 
-    </script>
+let all=`<br>Hello my name is ${name} , I am from ${address} Welcome to FCT`
+
+document.write(all);
+
+let all2=`<br>Hello my name is ${name} ,
+ I am from ${address},
+ Welcome to FCT`
+console.log (all2);
+
+
+//funtion defination
+var fname = "Aditya";
+var lname = "Sanap";
+
+function fullName(fname, lname) {
+    return `${fname} ${lname}`;
+}
+
+// function call inside template literal
+let message = `Hello my full name is ${fullName(fname, lname)}`;
+
+// print
+document.write(message);
+
+</script>
 </body>
 </html>

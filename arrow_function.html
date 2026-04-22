@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <script>
-        //old style function-without parameter
-        function welcome() {
-          document.write("Hello Aditya and Om");
+        //traditional/old style
+        function Welcome(){//function
+            document.write("Its aditya<br>")//statement
         }
-        welcome(); //functiom calling
-
-        let Welcome2 = function () {
-          return "hello Nikitaa and bharti";
-        };
-       document.write(welcome2() + "<br>");
-      //write parameter
-         let welcome3 = function (name) {
-       return `hello its ${name}`;
-         };
-         document.write(welcome3("anand") + "<br>");
-        using arrow function
-const welcome5 =() =>{
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Welcome();
+         //using arrow function
+          const Welcome2 = () =>document.write("Its Sanap <br>")
+ Welcome2();
 
     </script>
-  </body>
+
+<script>
+    let Welcome3 = function(name){
+        return `Hello its ${name}`;
+
+    }
+    document.write(Welcome3("Kaustubh")+"<br>")
+
+
+
+    //arrow function
+    let Welcome4 = (name) =>{
+                return `Hello its ${name}`;
+
+    }
+        document.write(Welcome4("Vishal")+"<br>")
+console.log(typeof Welcome4);
+
+let Welcome5 =(name,age) =>  `Hello my name is ${name} and my age is ${age} `;
+document.write(Welcome5("aditya",23));
+
+
+//using arrow function
+const addition=(num1,num2) =>  num1 + num2;
+console.log(addition(20,40));
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
 </html>

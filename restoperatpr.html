@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum1(){
+            let sum = 0;
+            for(let i in arguments)//arguments -holds all passed values
+            {
+                sum+=arguments[i];
+
+            }
+            document.write(sum +"<br>");//return total sum
+            
+        }
+        sum1(10,20,30,40,50);
+                sum1(10,200);//call and print result 
+
+    
+    </script>
+    <script>
+        function sumRest(name,course,...args){
+            document.write(`Hey my name is ${name} my course name is ${course}`);
+             let sum =0;
+             for(let i in args){
+                sum +=args[i];
+             }
+             document.write(sum + "<br>")
+
+        }
+        sumRest("Aditya","BCS",89,96,49,37,36);
+
+    </script>
+</body>
+</html>

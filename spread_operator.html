@@ -6,12 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function sun 2(num,...args){
-            document.write(`hello is ${name}and total marsk :`);
-            
-             )
+  <script>
+     function sumRest(name,...args){//rest operator while declaring function
+            document.write(`Hey my name is ${name}:`);
+             let sum =1;
+             for(let i in args){
+                sum +=args[i];
+             }
+             document.write(sum + "<br>")
+
         }
-    </script>
+        var arr =[20,80,90];
+        sumRest("Aditya",...arr);//spread operator used while function call
+  </script>  
 </body>
 </html>
