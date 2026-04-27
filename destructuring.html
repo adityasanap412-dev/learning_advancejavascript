@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+//     const person ={
+//         name:'Aditya',
+//         age:21,
+//         gender:"male",
+
+//     }
+// //     let name=person.name;
+// //     let age=person.age;
+// //     let gender=person.gender;
+// //  document.write(`My name is -${name},my age is${age},and my gender is${gender}`)
+//     const person1 = {
+//         name1: 'Rahul',
+//         age1: 25,
+//         gender1: "male",
+//     };
+
+//     const { name1, age1, gender1 } = person1;
+
+//     document.write(`My name is ${name1}, my age is ${age1}, and my gender is ${gender1}`);
+    const person = {
+        name: "Aditya",
+        age: 21,
+        address: {
+            city: "Pune",
+            state: "Maharashtra"
+        }
+    };
+
+    const { name, address: { city, state } } = person;
+
+    document.write(`${name} lives in ${city}, ${state}`);
+
+//destructuring in nested
+
+    const arr = [10, 20, 30];//array destructuring — assigning array values directly to variables.
+
+    const [a, b, c] = arr;
+
+    document.write(`a = ${a}, b = ${b}, c = ${c}`);
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function printValues([a, b, c]) {
+        document.write(`a = ${a}, b = ${b}, c = ${c}`);
+    }
+
+    printValues([10, 20, 30]);
+
+
+//with function
+
+  </script>  
+</body>
+</html>
