@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Promise All Example</title>
+</head>
+<body>
+
+<script>
+    // // Promise 1
+    // let p1 = new Promise((resolve) => {
+    //     setTimeout(() => {
+    //         resolve("🍎 Apple is ready");
+    //     }, 1000);
+    // });
+
+    // // Promise 2
+    // let p2 = new Promise((resolve) => {
+    //     setTimeout(() => {
+    //         resolve("🍌 Banana is ready");
+    //     }, 2000);
+    // });
+
+    // // Promise 3
+    // let p3 = new Promise((resolve) => {
+    //     setTimeout(() => {
+    //         resolve("🥭 Mango is ready");
+    //     }, 1500);
+    // });
+
+    // // Using Promise.all
+    // Promise.all([p1, p2, p3])
+    //     .then((results) => {
+    //         console.log("All fruits ready:");
+    //         console.log(results);
+    //     })
+    //     .catch((error) => {
+    //         console.log("Error:", error);
+    //     });
+
+////////////////////////////////////////////////////////////////////////////////
+
+//⚠️ Example with rejection
+
+
+let p4 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("❌ Orange failed");
+    }, 1200);
+});
+
+Promise.all([p1, p2, p4])
+    .then(res => console.log(res))
+    .catch(err => console.log("Failed:", err));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern AJAX (Fetch)</title>
+</head>
+<body>
+
+    <h2>Load Data using Fetch API</h2>
+
+    <button onclick="loadText()">Load Text</button>
+    <button onclick="loadJSON()">Load JSON</button>
+
+    <pre id="output">Click a button to load data</pre>
+
+    <script>
+        // Load Text File
+        function loadText() {
+            fetch("file.txt")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Text file not found");
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById("output").innerText = data;
+                })
+                .catch(error => {
+                    document.getElementById("output").innerText = error;
+                });
+        }
+
+        // Load JSON File
+        function loadJSON() {
+            fetch("data.json")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("JSON file not found");
+                    }
+                    return response.json(); // directly converts to object
+                })
+                .then(data => {
+                    // Convert object to formatted string
+                    let formatted = JSON.stringify(data, null, 2);
+                    document.getElementById("output").innerText = formatted;
+                })
+                .catch(error => {
+                    document.getElementById("output").innerText = error;
+                });
+        }
+    </script>
+
+</body>
+</html>

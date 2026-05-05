@@ -29,6 +29,12 @@
     // Handling promise
     prom.then(onFulfilment).catch(onRejection);
 </script> -->
- 
+ <script>
+    let id = setTimeout(() => {
+    console.log("Will not run");
+}, 3000);
+
+clearTimeout(id);
+ </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load JSON</title>
+</head>
+<body>
+
+    <h2>Load JSON Data</h2>
+
+    <button onclick="loadJSON()">Load JSON File</button>
+
+    <pre id="output">Click button to load JSON</pre>
+
+    <script>
+        function loadJSON() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "data.json", true);
+
+            xhr.onload = function () {
+                if (this.status === 200) {
+                    let data = JSON.parse(this.responseText);
+
+                    // Convert object back to string for display
+                    let formatted = JSON.stringify(data, null, 2);
+
+                    document.getElementById("output").innerText = formatted;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+</html>
